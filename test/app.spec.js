@@ -21,4 +21,16 @@ describe('Test Suite',()=>{
         expect(callback.calledOnce).to.be.true;
     
     })
+    it("mock the hello func",()=>{
+       
+
+        // hello shld be ignored and a mock method is called
+        var mock = sinon.mock(myObj);
+        var expectation = mock.expects('hello');
+        expectation.exactly(1)
+         // prints hello
+         myObj.anotherfunc(10,20)
+
+        mock.verify();
+    })
 })

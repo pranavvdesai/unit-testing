@@ -16,12 +16,17 @@ class Myclass{
     console.log("Myclass constructor");
   }
 
+  hello(){
+    console.log("Hello");
+  }
+
   add(arg1,arg2){
     var result=arg1+arg2;
     return result;
   }
 
   anotherfunc(arg1,arg2){
+    this.hello();
     this.add(arg1,arg2);
   }
 
