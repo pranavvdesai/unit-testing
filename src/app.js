@@ -27,7 +27,8 @@ class Myclass{
 
   anotherfunc(arg1,arg2){
     this.hello();
-    this.add(arg1,arg2);
+    var result = this.add(arg1,arg2);
+    return result;
   }
 
 
