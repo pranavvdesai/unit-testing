@@ -36,6 +36,16 @@ callthecallback(callback){
   callback();
 }
 
+testPromise(){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve(1);
+    },2000);
+  }).then((result)=>{
+    return result*2
+  });
+}
+
 }
 
 module.exports=Myclass;
